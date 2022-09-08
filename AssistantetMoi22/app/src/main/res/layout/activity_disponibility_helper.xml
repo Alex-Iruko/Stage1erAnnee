@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DisponibilityHelperActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_containerHelper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <TextView
+            android:id="@+id/app_title"
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:text="@string/app_name"
+            android:textSize="42dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/page_title"
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Mes disponibilités"
+            android:textSize="36dp"
+            app:layout_constraintEnd_toEndOf="@+id/app_title"
+            app:layout_constraintStart_toStartOf="@+id/app_title"
+            app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+        <TextView
+            android:id="@+id/de"
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="De "
+            android:textSize="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/page_title" />
+
+        <EditText
+            android:id="@+id/heureOne"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:hint="00:00"
+            android:inputType="time"
+            android:padding="20dp"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/page_title"
+            app:layout_constraintTop_toBottomOf="@+id/page_title" />
+
+        <TextView
+            android:id="@+id/A"
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="132dp"
+            android:text="A"
+            android:textSize="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="@id/page_title"
+            app:layout_constraintTop_toBottomOf="@+id/page_title" />
+
+        <EditText
+            android:id="@+id/HeureTwo"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="224dp"
+            android:layout_marginTop="16dp"
+            android:hint="00:00"
+            android:inputType="time"
+            android:padding="20dp"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/page_title"
+            app:layout_constraintTop_toBottomOf="@+id/page_title" />
+
+        <EditText
+            android:id="@+id/weak"
+            android:layout_width="160dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="428dp"
+            android:hint="L M Me J V S D"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Open"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="216dp"
+            android:background="@drawable/button_disponibility_helper"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.189"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/Close"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="216dp"
+            android:background="@drawable/button_disponibility_two_helper"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.782"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10"
+            android:background="@drawable/button_back"
+            android:text="Retour"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <Button
+            android:id="@+id/buttonAideEnLigne"
+            android:layout_width="310dp"
+            android:layout_height="94dp"
+            android:background="@drawable/mybutton"
+            android:onClick="onButtonClick"
+            android:text="Rejoindre une assistance"
+            android:textColor="#FFFFFF"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.906" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

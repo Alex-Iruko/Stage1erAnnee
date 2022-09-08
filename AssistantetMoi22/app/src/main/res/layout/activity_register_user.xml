@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterUserActivity">
+
+    <TextView
+        android:id="@+id/app_title"
+        style="@style/TitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Inscription"
+        android:textSize="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/register_user"
+        style="@style/TitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Usager"
+        android:textSize="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_container"
+        app:layout_constraintStart_toStartOf="@+id/fragment_container"
+        app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+    <EditText
+        android:id="@+id/input_register_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="votre nom"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_container"
+        app:layout_constraintTop_toBottomOf="@+id/register_user" />
+
+    <EditText
+        android:id="@+id/input_register_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="28dp"
+        android:inputType="text"
+        android:hint="votre prénom"
+        app:layout_constraintStart_toStartOf="@+id/input_register_name"
+        app:layout_constraintTop_toBottomOf="@+id/input_register_name" />
+
+    <EditText
+        android:id="@+id/input_register_adress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="28dp"
+        android:inputType="text"
+        android:hint="votre adresse"
+        app:layout_constraintStart_toStartOf="@+id/input_register_username"
+        app:layout_constraintTop_toBottomOf="@+id/input_register_username" />
+
+    <EditText
+        android:id="@+id/input_register_birthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="28dp"
+        android:inputType="date"
+        android:hint="jj/mm/aaaa"
+        app:layout_constraintStart_toStartOf="@+id/input_register_adress"
+        app:layout_constraintTop_toBottomOf="@+id/input_register_adress" />
+
+    <EditText
+        android:id="@+id/input_register_handicap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="28dp"
+        android:inputType="text"
+        android:hint="votre handicap (facultatif)"
+        app:layout_constraintStart_toStartOf="@+id/input_register_birthdate"
+        app:layout_constraintTop_toBottomOf="@+id/input_register_birthdate" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-92dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/buttonValideOneUser"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/button_user"
+            android:text="Valider"
+            android:textColor="#FFFFFF"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view_separation"
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.224"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back"
+            android:text="Retour"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022"
+            android:layout_marginLeft="@dimen/margin10"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
